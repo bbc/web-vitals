@@ -26,6 +26,7 @@
   "homepage": "https://github.com/bbc/web-vitals/blob/main/README.md",
   "dependencies": {
     "cross-fetch": "^3.1.5",
+    "eslint": "7.10.0",
     "react-adaptive-hooks": "0.0.8",
     "web-vitals": "^3.0.1"
   },
