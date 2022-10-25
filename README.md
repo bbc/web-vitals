@@ -28,13 +28,13 @@ npm install @bbc/web-vitals --save
 
 ## Props
 
-| Argument          | Type     | Required | Default     | Example             |
-| ----------------- | -------- | -------- | ----------- | ------------------- |
-| enabled           | Boolean  | No       | false       | `{ enabled: true }` |
+| Argument          | Type     | Required | Default     | Example                                                       |
+| ----------------- | -------- | -------- | ----------- | ------------------------------------------------------------- |
+| enabled           | Boolean  | No       | false       | `{ enabled: true }`                                           |
 | reportingEndpoint | String   | Yes      | N/A         | `{ reportingEndpoint: 'https://url.to.report.to/analytics' }` |
-| loggerCallback    | Function | No       | `() => {}`  | `{ loggerCallback: (error) => console.error(error) }` |
-| sampleRate        | Integer  | No       | 100         | `{ sampleRate: 5 }` |
-| reportParams      | Object   | No       | `undefined` | `{ reportParams: { pageType: 'STY' }` |
+| loggerCallback    | Function | No       | `() => {}`  | `{ loggerCallback: (error) => console.error(error) }`         |
+| sampleRate        | Integer  | No       | 100         | `{ sampleRate: 5 }`                                           |
+| reportParams      | Object   | No       | `undefined` | `{ reportParams: { pageType: 'STY' }`                         |
 
 ## Usage
 
@@ -80,12 +80,12 @@ In situations where users have not provided permission for the relevant personal
 
 ## Contributing
 
-Psammead is completely open source. We are grateful for any contributions, whether they be new utilities, bug fixes or general improvements. Please see our primary contributing guide which can be found at [the root of the Psammead repository](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md).
+Psammead is completely open source. We are grateful for any contributions, whether they be new utilities, bug fixes or general improvements. Please see our primary contributing guide which can be found at [the root of the Psammead repository](https://github.com/bbc/web-vitals/blob/latest/CONTRIBUTING.md).
 
-### [Code of Conduct](https://github.com/bbc/psammead/blob/latest/CODE_OF_CONDUCT.md)
+### [Code of Conduct](https://github.com/bbc/web-vitals/blob/latest/CODE_OF_CONDUCT.md)
 
-We welcome feedback and help on this work. By participating in this project, you agree to abide by the [code of conduct](https://github.com/bbc/psammead/blob/latest/CODE_OF_CONDUCT.md). Please take a moment to read it.
+We welcome feedback and help on this work. By participating in this project, you agree to abide by the [code of conduct](https://github.com/bbc/web-vitals/blob/latest/.github/CODE_OF_CONDUCT.md). Please take a moment to read it.
 
 ### License
 
-Psammead is [Apache 2.0 licensed](https://github.com/bbc/psammead/blob/latest/LICENSE).
+Web-Vitals is [Apache 2.0 licensed](https://github.com/bbc/web-vitals/blob/latest/LICENSE.md).

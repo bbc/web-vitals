@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ['12']
+        node-version: ['16']
     env:
       CI: true
       LOG_LEVEL: 'error'
@@ -45,8 +45,8 @@ jobs:
           ./scripts/installNodeModules.sh
 
       - name: Setup Code Climate Test Coverage
-        # Only run if the workflow started from bbc/psammead i.e. not a fork.
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/psammead' }}
+        # Only run if the workflow started from bbc/web-vitals i.e. not a fork.
+        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/web-vitals' }}
         run: |
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
           chmod +x ./cc-test-reporter
@@ -57,5 +57,5 @@ jobs:
 
       - name: Report Code Climate Test Coverage
         # Only run if the workflow started from bbc/psammead i.e. not a fork.
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/psammead' }}
+        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/web-vitals' }}
         run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0
