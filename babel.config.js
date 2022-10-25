@@ -24,11 +24,6 @@ const presets = [
 ];
 
 module.exports = {
-  plugins: [
-    '@emotion',
-    '@babel/plugin-proposal-export-default-from',
-    '@loadable/babel-plugin',
-  ],
   presets,
   env: {
     // used by Jest
