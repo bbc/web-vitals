@@ -7,7 +7,6 @@
   "description": "Generic hook for reporting web vitals metrics to an endpoint",
   "scripts": {
     "preinstall": "node scripts/check-package-manager.js && sh scripts/enforceVersions.sh",
-    "postinstall": "yarn packages:check && yarn build",
     "publish": "node scripts/publish",
     "test": "yarn test:lint && yarn test:unit",
     "test:ci": "yarn test:lint && yarn test:unit:ci",
