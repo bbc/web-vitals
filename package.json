@@ -39,6 +39,8 @@
     "prettier": "2.2.1",
     "react-adaptive-hooks": "0.0.8",
     "shelljs": "0.8.5",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recommended": "5.0.0",
     "web-vitals": "^3.0.1"
   },
   "peerDependencies": {
