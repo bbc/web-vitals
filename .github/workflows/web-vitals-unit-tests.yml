@@ -44,18 +44,6 @@ jobs:
           echo ${GITHUB_REF##*/}
           ./scripts/installNodeModules.sh
 
-      - name: Setup Code Climate Test Coverage
-        # Only run if the workflow started from bbc/web-vitals i.e. not a fork.
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/web-vitals' }}
-        run: |
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-          chmod +x ./cc-test-reporter
-          ./cc-test-reporter before-build
 
       - name: Unit Tests
         run: yarn test:ci
-
-      - name: Report Code Climate Test Coverage
-        # Only run if the workflow started from bbc/psammead i.e. not a fork.
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/web-vitals' }}
-        run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0
