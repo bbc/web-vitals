@@ -80,7 +80,7 @@ In situations where users have not provided permission for the relevant personal
 
 ## Contributing
 
-Psammead is completely open source. We are grateful for any contributions, whether they be new utilities, bug fixes or general improvements. Please see our primary contributing guide which can be found at [the root of the Psammead repository](https://github.com/bbc/web-vitals/blob/latest/CONTRIBUTING.md).
+Web Vitals is completely open source. We are grateful for any contributions, whether they be new utilities, bug fixes or general improvements. Please see our primary contributing guide which can be found at [the root of the Web Vitals repository](https://github.com/bbc/web-vitals/blob/latest/CONTRIBUTING.md).
 
 ### [Code of Conduct](https://github.com/bbc/web-vitals/blob/latest/CODE_OF_CONDUCT.md)
 
