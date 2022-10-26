@@ -1415,10 +1415,10 @@ __metadata:
     "@babel/plugin-transform-runtime": 7.14.5
     "@babel/preset-env": 7.14.5
     "@babel/preset-react": 7.14.5
-    "@testing-library/jest-dom": ^5.11.4
-    "@testing-library/react": ^12.0.0
+    "@testing-library/jest-dom": 5.16.5
+    "@testing-library/react": 12.1.5
     "@testing-library/react-hooks": 7.0.2
-    "@testing-library/user-event": ^13.1.9
+    "@testing-library/user-event": 13.5.0
     babel-eslint: 10.1.0
     cross-fetch: ^3.1.5
     eslint: ^7.10.0
@@ -1431,7 +1431,7 @@ __metadata:
     eslint-plugin-react: 7.22.0
     jest: ^26.5.0
     prettier: 2.2.1
-    react: ^17.0.2
+    react: 17.0.2
     react-adaptive-hooks: 0.0.8
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
@@ -1917,7 +1917,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^5.11.4":
+"@testing-library/jest-dom@npm:5.16.5":
   version: 5.16.5
   resolution: "@testing-library/jest-dom@npm:5.16.5"
   dependencies:
@@ -1956,7 +1956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^12.0.0":
+"@testing-library/react@npm:12.1.5":
   version: 12.1.5
   resolution: "@testing-library/react@npm:12.1.5"
   dependencies:
@@ -1970,7 +1970,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:^13.1.9":
+"@testing-library/user-event@npm:13.5.0":
   version: 13.5.0
   resolution: "@testing-library/user-event@npm:13.5.0"
   dependencies:
@@ -7641,7 +7641,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"react@npm:^17.0.2":
+"react@npm:17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
