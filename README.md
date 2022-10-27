@@ -1,4 +1,4 @@
-# web-vitals - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fweb-vitals%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fweb-vitals%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/web-vitals)](https://david-dm.org/bbc/psammead?path=packages/components/web-vitals) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/web-vitals)](https://david-dm.org/bbc/psammead?path=packages/components/web-vitals&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/web-vitals--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/web-vitals.svg)](https://www.npmjs.com/package/@bbc/web-vitals) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# Web-Vitals - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fweb-vitals%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fweb-vitals%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/web-vitals)](https://david-dm.org/bbc/psammead?path=packages/components/web-vitals) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/web-vitals)](https://david-dm.org/bbc/psammead?path=packages/components/web-vitals&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/web-vitals--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/web-vitals.svg)](https://www.npmjs.com/package/@bbc/web-vitals) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -6,7 +6,7 @@ The `WebVitals` utility provides a configurable hook which will collect device c
 
 ### Metrics we report on
 
-#### Core Web-Vitals
+### Core Web-Vitals
 
 - [CLS](https://web.dev/cls/) (Cumulative Layout Shift)
 - [LCP](https://web.dev/lcp/) (Largest Contentful Paint)
