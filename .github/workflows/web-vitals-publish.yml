@@ -1,4 +1,4 @@
-name: Psammead CD - Publish Packages
+name: Web Vitals CD - Publish Packages
 on:
   push:
     branches:
