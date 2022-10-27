@@ -1,4 +1,4 @@
-name: Psammead CI - Unit Tests & Code Coverage
+name: Web Vitals CI - Unit Tests & Code Coverage
 
 on:
   create:
