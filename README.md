@@ -6,13 +6,13 @@ The `WebVitals` utility provides a configurable hook which will collect device c
 
 ### Metrics we report on
 
-### Core Web-Vitals
+#### Core Web-Vitals
 
 - [CLS](https://web.dev/cls/) (Cumulative Layout Shift)
 - [LCP](https://web.dev/lcp/) (Largest Contentful Paint)
 - [FID](https://web.dev/fid/) (First Input Delay)
 
-### Other data (useful for categorising the web-vitals data received)
+#### Other data (useful for categorising the web-vitals data received)
 
 - [FCP](https://web.dev/fcp/) (First Contentful Paint)
 - [TTFB](https://web.dev/time-to-first-byte/) (Time To First Byte)
