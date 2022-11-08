@@ -16,6 +16,7 @@ The `WebVitals` utility provides a configurable hook which will collect device c
 
 - [FCP](https://web.dev/fcp/) (First Contentful Paint)
 - [TTFB](https://web.dev/time-to-first-byte/) (Time To First Byte)
+- [INP](https://web.dev/inp/) (Interaction to Next Paint)
 - Device Memory
 - Device CPU
 - Effective Connection Type
