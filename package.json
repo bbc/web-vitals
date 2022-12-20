@@ -62,5 +62,5 @@
     "@testing-library/user-event": "^13.1.9",
     "react": "^17.0.2"
   },
-  "packageManager": "yarn@3.0.0"
+  "packageManager": "yarn@3.3.1"
 }
