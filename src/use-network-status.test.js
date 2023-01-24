@@ -51,11 +51,13 @@ describe('useNetworkStatus', () => {
       effectiveType: '4g'
     };
 
-    const { result } = renderHook(() => useNetworkStatus());
+    const { result, unmount } = renderHook(() => useNetworkStatus());
 
     testEctStatusEventListenerMethod(ectStatusListeners.addEventListener);
     expect(result.current.unsupported).toBe(false);
     expect(result.current.effectiveConnectionType).toEqual('4g');
+
+    unmount()
   });
 
   test('should not return initialEffectiveConnectionType for supported case', () => {
@@ -65,13 +67,15 @@ describe('useNetworkStatus', () => {
       effectiveType: '4g'
     };
 
-    const { result } = renderHook(() =>
+    const { result, unmount } = renderHook(() =>
       useNetworkStatus(initialEffectiveConnectionType)
     );
 
     testEctStatusEventListenerMethod(ectStatusListeners.addEventListener);
     expect(result.current.unsupported).toBe(false);
     expect(result.current.effectiveConnectionType).toEqual('4g');
+
+    unmount();
   });
 
   test('should update the effectiveConnectionType state', () => {
@@ -90,11 +94,13 @@ describe('useNetworkStatus', () => {
       effectiveType: '2g'
     };
 
-    const { result } = renderHook(() => useNetworkStatus());
+    const { result, unmount } = renderHook(() => useNetworkStatus());
     global.navigator.connection.effectiveType = '4g';
     act(() => map.change());
 
     expect(result.current.effectiveConnectionType).toEqual('4g');
+
+    unmount();
   });
 
   test('should remove the listener for the navigator.connection change event on unmount', () => {
