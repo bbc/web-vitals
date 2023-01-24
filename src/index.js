@@ -1,11 +1,9 @@
 import fetch from 'cross-fetch';
 import { useEffect, useState } from 'react';
 import { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } from 'web-vitals';
-import {
-  useNetworkStatus,
-  useHardwareConcurrency,
-  useMemoryStatus,
-} from 'react-adaptive-hooks';
+import { useNetworkStatus } from './use-network-status';
+import { useHardwareConcurrency } from './use-hardware-concurrency';
+import { useMemoryStatus } from './use-memory-status';
 import useEvent from './use-event';
 
 const noOp = () => {};
