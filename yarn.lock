@@ -1432,15 +1432,12 @@ __metadata:
     jest: ^26.5.0
     prettier: 2.2.1
     react: ^17.0.2
-    react-adaptive-hooks: 0.0.8
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
     shelljs: 0.8.5
     stylelint: ^13.7.2
     stylelint-config-recommended: 5.0.0
     web-vitals: ^3.0.1
-  peerDependencies:
-    react: ">=16.9.0"
   languageName: unknown
   linkType: soft
 
@@ -7554,15 +7551,6 @@ fsevents@^2.1.2:
   version: 4.0.1
   resolution: "quick-lru@npm:4.0.1"
   checksum: bea46e1abfaa07023e047d3cf1716a06172c4947886c053ede5c50321893711577cb6119360f810cc3ffcd70c4d7db4069c3cee876b358ceff8596e062bd1154
-  languageName: node
-  linkType: hard
-
-"react-adaptive-hooks@npm:0.0.8":
-  version: 0.0.8
-  resolution: "react-adaptive-hooks@npm:0.0.8"
-  peerDependencies:
-    react: ^16.8.0
-  checksum: 70e4fc2b536a2593935235b21835cf473f657cc694d6d047678f1cfbfc9088601454aa87ea62229f51f57b34dcf6f44d0a04aa7137a6605bd2d723b873622e0e
   languageName: node
   linkType: hard
 

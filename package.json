@@ -6,12 +6,10 @@
   "sideEffects": false,
   "description": "Generic hook for reporting web vitals metrics to an endpoint",
   "scripts": {
-    "preinstall": "node scripts/check-package-manager.js && sh scripts/enforceVersions.sh",
     "publish": "node scripts/publish",
     "test": "yarn test:lint && yarn test:unit",
     "test:ci": "yarn test:lint && yarn test:unit:ci",
     "test:lint": "eslint --ext .js,jsx,json ./scripts && stylelint 'scripts/**/*.js'",
-    "test:unit": "yarn build && jest --verbose --coverage",
     "test:unit:ci": "jest --verbose --coverage"
   },
   "repository": {
@@ -39,16 +37,13 @@
     "eslint-plugin-react": "7.22.0",
     "jest": "^26.5.0",
     "prettier": "2.2.1",
-    "react-adaptive-hooks": "0.0.8",
+    "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "shelljs": "0.8.5",
     "stylelint": "^13.7.2",
     "stylelint-config-recommended": "5.0.0",
     "web-vitals": "^3.0.1"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "7.14.5",
@@ -59,8 +54,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^12.0.0",
     "@testing-library/react-hooks": "7.0.2",
-    "@testing-library/user-event": "^13.1.9",
-    "react": "^17.0.2"
+    "@testing-library/user-event": "^13.1.9"
   },
   "packageManager": "yarn@3.0.0"
 }
