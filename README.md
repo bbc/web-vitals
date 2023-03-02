@@ -1,22 +1,27 @@
-# Web-Vitals - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fweb-vitals%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fweb-vitals%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/web-vitals)](https://david-dm.org/bbc/psammead?path=packages/components/web-vitals) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/web-vitals)](https://david-dm.org/bbc/psammead?path=packages/components/web-vitals&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/web-vitals--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/web-vitals.svg)](https://www.npmjs.com/package/@bbc/web-vitals) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# Web-Vitals
 
-## Description
+
+
 
 The `WebVitals` utility provides a configurable hook which will collect device capability metrics and [Web Vitals](https://web.dev/vitals/?gclid=CjwKCAjw-5v7BRAmEiwAJ3DpuGq4yydZBEHoLscEvvrOE5Ef01huTLJebM6jdIWsGKS5L3QeMT5GfhoCNpkQAvD_BwE) metrics for each page view, and then send those metrics to a reporting endpoint when the user leaves the page.
 
-### Metrics we report on
+## Metrics we report on
 
-#### Core Web-Vitals
+### Core Web-Vitals
+
+
 
 - [CLS](https://web.dev/cls/) (Cumulative Layout Shift)
 - [LCP](https://web.dev/lcp/) (Largest Contentful Paint)
 - [FID](https://web.dev/fid/) (First Input Delay)
 
-#### Other data (useful for categorising the web-vitals data received)
+### Other data (useful for categorising the web-vitals data received)
+
 
 - [FCP](https://web.dev/fcp/) (First Contentful Paint)
 - [TTFB](https://web.dev/time-to-first-byte/) (Time To First Byte)
 - [INP](https://web.dev/inp/) (Interaction to Next Paint)
+
 - Device Memory
 - Device CPU
 - Effective Connection Type
@@ -83,7 +88,8 @@ In situations where users have not provided permission for the relevant personal
 
 Web Vitals is completely open source. We are grateful for any contributions, whether they be new utilities, bug fixes or general improvements. Please see our primary contributing guide which can be found at [the root of the Web Vitals repository](https://github.com/bbc/web-vitals/blob/latest/CONTRIBUTING.md).
 
-### [Code of Conduct](https://github.com/bbc/web-vitals/blob/latest/CODE_OF_CONDUCT.md)
+### Code of Conduct
+
 
 We welcome feedback and help on this work. By participating in this project, you agree to abide by the [code of conduct](https://github.com/bbc/web-vitals/blob/latest/.github/CODE_OF_CONDUCT.md). Please take a moment to read it.
 
