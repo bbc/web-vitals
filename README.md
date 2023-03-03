@@ -1,22 +1,16 @@
 # Web-Vitals
 
-
-
-
 The `WebVitals` utility provides a configurable hook which will collect device capability metrics and [Web Vitals](https://web.dev/vitals/?gclid=CjwKCAjw-5v7BRAmEiwAJ3DpuGq4yydZBEHoLscEvvrOE5Ef01huTLJebM6jdIWsGKS5L3QeMT5GfhoCNpkQAvD_BwE) metrics for each page view, and then send those metrics to a reporting endpoint when the user leaves the page.
 
 ## Metrics we report on
 
 ### Core Web-Vitals
 
-
-
 - [CLS](https://web.dev/cls/) (Cumulative Layout Shift)
 - [LCP](https://web.dev/lcp/) (Largest Contentful Paint)
 - [FID](https://web.dev/fid/) (First Input Delay)
 
 ### Other data (useful for categorising the web-vitals data received)
-
 
 - [FCP](https://web.dev/fcp/) (First Contentful Paint)
 - [TTFB](https://web.dev/time-to-first-byte/) (Time To First Byte)
@@ -30,6 +24,14 @@ The `WebVitals` utility provides a configurable hook which will collect device c
 
 ```jsx
 npm install @bbc/web-vitals --save
+```
+
+### Install `yarn`
+
+The Web Vitals project uses `yarn` for package management. It is recommended to install `yarn` through the npm package manager, which comes bundled with Node.js when you install it on your system. To install Yarn, run this command:
+
+```
+npm install --global yarn
 ```
 
 ## Props
