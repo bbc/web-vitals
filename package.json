@@ -3,6 +3,12 @@
   "version": "1.2.1",
   "main": "dist/index.js",
   "module": "esm/index.js",
+  "exports": {
+    ".": {
+      "require": "dist/index.js",
+      "import": "esm/index.js"
+    }
+  },
   "sideEffects": false,
   "description": "Generic hook for reporting web vitals metrics to an endpoint",
   "scripts": {
@@ -11,6 +17,7 @@
     "build:esm": "BABEL_TYPE=esm npx babel src -d esm --ignore '**/*.test.js'",
     "preinstall": "node scripts/check-package-manager.js && sh scripts/enforceVersions.sh",
     "publish": "node scripts/publish",
+    "prepublish": "yarn build",
     "test": "yarn test:lint && yarn test:unit",
     "test:lint": "eslint --ext .js,jsx,json ./scripts && stylelint 'scripts/**/*.js'",
     "test:unit": "jest --verbose --coverage"
