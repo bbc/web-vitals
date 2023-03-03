@@ -1,11 +1,14 @@
 {
   "name": "@bbc/web-vitals",
   "version": "1.2.1",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
   "sideEffects": false,
   "description": "Generic hook for reporting web vitals metrics to an endpoint",
   "scripts": {
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "npx babel src -d dist --ignore '**/*.test.js,**/*.test.jsx'",
+    "build:esm": "BABEL_TYPE=esm npx babel src -d esm --ignore '**/*.test.js,**/*.test.jsx'",
     "preinstall": "node scripts/check-package-manager.js && sh scripts/enforceVersions.sh",
     "publish": "node scripts/publish",
     "test": "yarn test:lint && yarn test:unit",
@@ -49,6 +52,8 @@
     "react": ">=16.9.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
     "@babel/plugin-proposal-export-default-from": "7.14.5",
     "@babel/plugin-transform-modules-commonjs": "7.14.5",
     "@babel/plugin-transform-runtime": "7.14.5",
