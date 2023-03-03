@@ -9,10 +9,8 @@
     "preinstall": "node scripts/check-package-manager.js && sh scripts/enforceVersions.sh",
     "publish": "node scripts/publish",
     "test": "yarn test:lint && yarn test:unit",
-    "test:ci": "yarn test:lint && yarn test:unit:ci",
     "test:lint": "eslint --ext .js,jsx,json ./scripts && stylelint 'scripts/**/*.js'",
-    "test:unit": "yarn build && jest --verbose --coverage",
-    "test:unit:ci": "jest --verbose --coverage"
+    "test:unit": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
