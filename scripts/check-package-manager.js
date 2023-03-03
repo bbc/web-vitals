@@ -7,9 +7,9 @@ const ensureYarn = () => {
       [
         '\n',
         '┌────────────────────────────────────────────────────────────────────┐',
-        '│ The Psammead project now uses Yarn for package management:         │',
+        '│ The Web Vitals project now uses Yarn for package management:         │',
         '│                                                                    │',
-        '│ https://github.com/bbc/psammead/blob/latest/README.md#install-yarn │',
+        '│ https://github.com/bbc/web-vitals/blob/latest/README.md#install-yarn │',
         '└────────────────────────────────────────────────────────────────────┘',
         '\n',
       ].join('\n'),
