@@ -12,7 +12,10 @@
     "test:ci": "yarn test:lint && yarn test:unit:ci",
     "test:lint": "eslint --ext .js,jsx,json ./scripts && stylelint 'scripts/**/*.js'",
     "test:unit": "yarn build && jest --verbose --coverage",
-    "test:unit:ci": "jest --verbose --coverage"
+    "test:unit:ci": "jest --verbose --coverage",
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "yarn exec babel src -d dist --ignore '**/*.test.js,**/*.test.jsx,**/*.stories.js,**/*.stories.jsx' --root-mode upward",
+    "build:esm": "BABEL_TYPE=esm yarn exec babel src -d esm --ignore '**/*.test.js,**/*.test.jsx,**/*.stories.js,**/*.stories.jsx' --root-mode upward"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,13 @@
   },
   "homepage": "https://github.com/bbc/web-vitals/blob/main/README.md",
   "dependencies": {
+    "@babel/cli": "7.14.5",
+    "@babel/core": "7.14.6",
+    "@babel/plugin-proposal-export-default-from": "7.14.5",
+    "@babel/plugin-transform-modules-commonjs": "7.14.5",
+    "@babel/plugin-transform-runtime": "7.14.5",
+    "@babel/preset-env": "7.14.5",
+    "@babel/preset-react": "7.14.5",
     "babel-eslint": "10.1.0",
     "cross-fetch": "^3.1.5",
     "eslint": "^7.10.0",
