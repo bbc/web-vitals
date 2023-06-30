@@ -14,8 +14,8 @@ coverage
 # Built storybook
 storybook_dist
 
-/dist
-/esm
+dist
+esm
 
 published.txt
 
