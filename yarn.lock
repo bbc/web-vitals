@@ -1619,7 +1619,7 @@ __metadata:
     shelljs: 0.8.5
     stylelint: ^13.7.2
     stylelint-config-recommended: 5.0.0
-    web-vitals: ^3.0.1
+    web-vitals: ^3.3.2
   peerDependencies:
     react: ">=16.9.0"
   languageName: unknown
@@ -9495,10 +9495,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^3.0.1":
-  version: 3.0.4
-  resolution: "web-vitals@npm:3.0.4"
-  checksum: b618a8e049e0c64948eea09c372db490802bcc8bcb30230a2bc69d9e243b1a2fa54d0f0ae19d5e63f19381df86db2a9260ca15ef620e10024888eab487a77d56
+"web-vitals@npm:^3.3.2":
+  version: 3.4.0
+  resolution: "web-vitals@npm:3.4.0"
+  checksum: 6baac515035a82f05623aa6592654af3b5fd8ca0359e368388e147c1376ca00e5f1b2256130f8e96249ee793a437b55615db21ae699d6d400bf2800f676e0114
   languageName: node
   linkType: hard
 
