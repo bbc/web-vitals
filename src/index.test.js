@@ -5,6 +5,9 @@ import useWebVitals from './index';
 
 jest.mock('cross-fetch');
 jest.mock('web-vitals');
+jest.mock('./lib/use-memory-status.js')
+jest.mock('./lib/use-hardware-concurrency.js')
+jest.mock('./lib/use-network-status.js')
 
 beforeEach(jest.clearAllMocks);
 
