@@ -1,14 +1,14 @@
 import fetch from 'cross-fetch';
 import { useEffect, useState } from 'react';
 import { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } from 'web-vitals';
-import {
-  useNetworkStatus,
-  useHardwareConcurrency,
-  useMemoryStatus,
-} from 'react-adaptive-hooks';
+
+import { useNetworkStatus } from './lib/use-network-status';
+import { useHardwareConcurrency } from './lib/use-hardware-concurrency';
+import { useMemoryStatus } from './lib/use-memory-status';
 import useEvent from './use-event';
 
 const noOp = () => {};
+let webVitalsDebug = false;
 
 const webVitalsBase = {
   age: 0,
@@ -60,6 +60,15 @@ const sendBeacon = (rawBeacon, reportingEndpoint, reportParams) => {
     ? appendReportParams(reportingEndpoint, reportParams)
     : reportingEndpoint;
 
+  if (webVitalsDebug === true) {
+    console.log('WEBVITALS DEBUG IS ON');
+    console.log(`In production, WebVitals data would be sent to ${beaconTarget} with the following payload`);
+    console.dir(rawBeacon);
+    return new Promise((resolve, reject) => {
+        resolve();
+    });
+  }
+
   if (navigator.sendBeacon) {
     const headers = { type: 'application/reports+json' };
     const blob = new Blob([beacon], headers);
@@ -88,8 +97,12 @@ const useWebVitals = ({
   loggerCallback = noOp,
   sampleRate = 100,
   reportParams,
+  webVitalsListener = 'pagehide',
+  debug = false,
 }) => {
   let pageLoadTime;
+  webVitalsDebug = debug;
+
   const [status, setStatus] = useState({ error: false });
   const shouldSendVitals = enabled && shouldSample(sampleRate);
 
@@ -111,7 +124,7 @@ const useWebVitals = ({
     sendBeacon(beacon, reportingEndpoint, reportParams).catch(loggerCallback);
   };
 
-  useEvent('pagehide', shouldSendVitals ? sendVitals : noOp);
+  useEvent(webVitalsListener, shouldSendVitals ? sendVitals : noOp);
 
   useEffect(() => {
     try {

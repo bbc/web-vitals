@@ -1,13 +1,22 @@
 {
   "name": "@bbc/web-vitals",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "main": "dist/index.js",
   "module": "esm/index.js",
+  "exports": {
+    ".": {
+      "require": "dist/index.js",
+      "import": "esm/index.js"
+    }
+  },
   "sideEffects": false,
   "description": "Generic hook for reporting web vitals metrics to an endpoint",
   "scripts": {
-    "preinstall": "node scripts/check-package-manager.js && sh scripts/enforceVersions.sh",
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "npx babel src -d dist --ignore '**/*.test.js'",
+    "build:esm": "BABEL_TYPE=esm npx babel src -d esm --ignore '**/*.test.js'",
     "publish": "node scripts/publish",
+    "prepublish": "yarn build",
     "test": "yarn test:lint && yarn test:unit",
     "test:ci": "yarn test:lint && yarn test:unit:ci",
     "test:lint": "eslint --ext .js,jsx,json ./scripts && stylelint 'scripts/**/*.js'",
@@ -27,6 +36,13 @@
   },
   "homepage": "https://github.com/bbc/web-vitals/blob/main/README.md",
   "dependencies": {
+    "@babel/cli": "7.14.5",
+    "@babel/core": "7.14.6",
+    "@babel/plugin-proposal-export-default-from": "7.14.5",
+    "@babel/plugin-transform-modules-commonjs": "7.14.5",
+    "@babel/plugin-transform-runtime": "7.14.5",
+    "@babel/preset-env": "7.14.5",
+    "@babel/preset-react": "7.14.5",
     "babel-eslint": "10.1.0",
     "cross-fetch": "^3.1.5",
     "eslint": "^7.10.0",
@@ -39,18 +55,17 @@
     "eslint-plugin-react": "7.22.0",
     "jest": "^26.5.0",
     "prettier": "2.2.1",
-    "react-adaptive-hooks": "0.0.8",
+    "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "shelljs": "0.8.5",
     "stylelint": "^13.7.2",
     "stylelint-config-recommended": "5.0.0",
-    "web-vitals": "^3.0.1"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0"
+    "web-vitals": "^3.3.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
     "@babel/plugin-proposal-export-default-from": "7.14.5",
     "@babel/plugin-transform-modules-commonjs": "7.14.5",
     "@babel/plugin-transform-runtime": "7.14.5",
@@ -59,8 +74,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^12.0.0",
     "@testing-library/react-hooks": "7.0.2",
-    "@testing-library/user-event": "^13.1.9",
-    "react": "^17.0.2"
+    "@testing-library/user-event": "^13.1.9"
   },
   "packageManager": "yarn@3.0.0"
 }

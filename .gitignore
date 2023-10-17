@@ -1,6 +1,7 @@
 **/.DS_Store
 **/node_modules
 npm-debug.log*
+yarn-error.log*
 
 # Compiled Assets
 public
@@ -11,11 +12,9 @@ public
 # Test reports
 coverage
 
-# Built storybook
-storybook_dist
-
-packages/**/dist
-packages/**/esm
+# Built output
+dist
+esm
 
 published.txt
 
