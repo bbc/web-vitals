@@ -1,12 +1,12 @@
 {
   "name": "@bbc/web-vitals",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "exports": {
     ".": {
-      "require": "dist/index.js",
-      "import": "esm/index.js"
+      "require": "./dist/index.js",
+      "import": "./esm/index.js"
     }
   },
   "sideEffects": false,
