@@ -14,6 +14,9 @@
       "esm"
     ]
   ,
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "sideEffects": false,
   "description": "Generic hook for reporting web vitals metrics to an endpoint",
   "scripts": {
