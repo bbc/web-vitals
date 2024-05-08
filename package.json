@@ -1,20 +1,20 @@
 {
   "name": "@bbc/web-vitals",
-  "version": "2.0.7",
-  "main": "dist/index.js",
-  "module": "esm/index.js",
+  "version": "2.0.8",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./esm/index.js"
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
     }
   },
   "sideEffects": false,
   "description": "Generic hook for reporting web vitals metrics to an endpoint",
   "scripts": {
     "build": "yarn build:cjs && yarn build:esm",
-    "build:cjs": "npx babel src -d dist --ignore '**/*.test.js'",
-    "build:esm": "BABEL_TYPE=esm npx babel src -d esm --ignore '**/*.test.js'",
+    "build:cjs": "npx babel src -d dist/cjs --ignore '**/*.test.js'",
+    "build:esm": "BABEL_TYPE=esm npx babel src -d dist/esm --ignore '**/*.test.js'",
     "publish": "node scripts/publish",
     "prepublish": "yarn build",
     "test": "yarn test:lint && yarn test:unit",
