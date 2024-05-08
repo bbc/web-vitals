@@ -1,6 +1,6 @@
 {
   "name": "@bbc/web-vitals",
-  "version": "2.0.9",
+  "version": "2.0.11",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "exports": {
@@ -9,6 +9,11 @@
       "import": "./esm/index.js"
     }
   },
+  "files": [
+      "dist",
+      "esm"
+    ]
+  ,
   "sideEffects": false,
   "description": "Generic hook for reporting web vitals metrics to an endpoint",
   "scripts": {
