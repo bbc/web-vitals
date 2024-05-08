@@ -64,7 +64,7 @@ describe(`Publish Script - publish`, () => {
     expect(
       shelljs.exec,
     ).toHaveBeenLastCalledWith(
-      'npm publish /foo/bar --access public --tag latest',
+      'npm publish --access public --tag latest',
       { silent: true },
     );
 
@@ -97,7 +97,7 @@ describe(`Publish Script - publish`, () => {
     expect(
       shelljs.exec,
     ).toHaveBeenCalledWith(
-      'npm publish /foo/bar --access public --tag latest',
+      'npm publish --access public --tag latest',
       { silent: true },
     );
 

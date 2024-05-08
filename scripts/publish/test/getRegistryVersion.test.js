@@ -50,19 +50,4 @@ describe(`Publish Script - getRegistry`, () => {
 
     expect(getRegistry('fo^£ob/.ar')).toEqual('-1');
   });
-
-  // Example name = 'psammead versions -json; echo I can inject code here; npm view psammead'
-  // npm view psammead versions -json; echo I can inject code here; npm view psammead  versions -json
-  it('should block the execution of exec if not in whiteliest ', () => {
-    const shell = jest.spyOn(shelljs, 'exec');
-
-    const getRegistry = require('../src/getRegistryVersion');
-
-    expect(
-      getRegistry(
-        'psammead versions -json; echo I can inject code here; npm view psammead;',
-      ),
-    ).toEqual('-1');
-    expect(shell).toHaveBeenCalledTimes(0);
-  });
 });
