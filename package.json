@@ -1,6 +1,6 @@
 {
   "name": "@bbc/web-vitals",
-  "version": "2.1.13",
+  "version": "2.1.17",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "exports": {
@@ -19,7 +19,6 @@
     "build": "yarn build:cjs && yarn build:esm",
     "build:cjs": "npx babel src -d dist --ignore '**/*.test.js'",
     "build:esm": "BABEL_TYPE=esm npx babel src -d esm --ignore '**/*.test.js'",
-    "publish": "npm publish",
     "prepublish": "yarn build",
     "test": "yarn test:lint && yarn test:unit",
     "test:ci": "yarn test:lint && yarn test:unit:ci",
