@@ -1,6 +1,6 @@
 {
   "name": "@bbc/web-vitals",
-  "version": "2.1.1",
+  "version": "2.1.9",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "exports": {
@@ -19,7 +19,7 @@
     "build": "yarn build:cjs && yarn build:esm",
     "build:cjs": "npx babel src -d dist --ignore '**/*.test.js'",
     "build:esm": "BABEL_TYPE=esm npx babel src -d esm --ignore '**/*.test.js'",
-    "publish": "node scripts/publish",
+    "publish": "npm publish",
     "prepublish": "yarn build",
     "test": "yarn test:lint && yarn test:unit",
     "test:ci": "yarn test:lint && yarn test:unit:ci",
@@ -29,7 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bbc/web-vitals"
+    "url": "git+https://github.com/bbc/web-vitals.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "author": {
     "name": "BBC"
