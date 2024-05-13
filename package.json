@@ -1,6 +1,6 @@
 {
   "name": "@bbc/web-vitals",
-  "version": "2.1.17",
+  "version": "2.1.19",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "exports": {
@@ -68,6 +68,10 @@
     "stylelint": "^13.7.2",
     "stylelint-config-recommended": "5.0.0",
     "web-vitals": "^3.3.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
