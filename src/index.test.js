@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch';
 import * as webVitals from 'web-vitals';
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react';
 import useWebVitals from './index';
 
 jest.mock('cross-fetch');
