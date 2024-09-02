@@ -16,7 +16,7 @@ const webVitalsBase = {
   url: 'current-page-url',
 };
 
-const vitals = { cls: null, fid: null, lcp: null, fcp: null, ttfb: null };
+const vitals = { cls: null, lcp: null, fcp: null, ttfb: null, inp: null };
 const deviceMetrics = {
   device_mem: null,
   device_cpu: null,
@@ -136,7 +136,6 @@ const useWebVitals = ({
         deviceMemory,
       });
       onCLS(updateWebVitals, { reportAllChanges: true });
-      onFID(updateWebVitals);
       onLCP(updateWebVitals, { reportAllChanges: true });
       onFCP(updateWebVitals);
       onTTFB(updateWebVitals);
