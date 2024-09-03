@@ -22,7 +22,7 @@
     "prepublish": "yarn build",
     "test": "yarn test:lint && yarn test:unit",
     "test:ci": "yarn test:lint && yarn test:unit:ci",
-    "test:lint": "eslint --ext .js,jsx,json ./scripts && stylelint 'scripts/**/*.js'",
+    "test:lint": "eslint --ext .js,jsx,json ./scripts",
     "test:unit": "yarn build && jest --verbose --coverage",
     "test:unit:ci": "jest --verbose --coverage"
   },
@@ -62,8 +62,6 @@
     "prettier": "2.2.1",
     "react-helmet": "^6.1.0",
     "shelljs": "0.8.5",
-    "stylelint": "^13.7.2",
-    "stylelint-config-recommended": "5.0.0",
     "web-vitals": "^3.3.2"
   },
   "peerDependencies": {
