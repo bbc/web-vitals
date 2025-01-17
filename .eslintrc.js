@@ -13,7 +13,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['prettier', 'json', 'jsx-a11y', 'import'],
+  plugins: ['prettier', 'json', 'import'],
   rules: {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-one-expression-per-line': 'off',
