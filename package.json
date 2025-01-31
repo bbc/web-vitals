@@ -16,7 +16,7 @@
   "description": "Generic hook for reporting web vitals metrics to an endpoint",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
-    "prepublish": "yarn build",
+    "prepublish": "npm run build",
     "test": "yarn test:lint && yarn test:unit",
     "test:ci": "yarn test:lint && yarn test:unit:ci",
     "test:lint": "eslint --ext .js,jsx,json ./scripts",
