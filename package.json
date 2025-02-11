@@ -1,6 +1,6 @@
 {
   "name": "@bbc/web-vitals",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "main": "dist/cjs.js",
   "module": "dist/esm.js",
   "exports": {
