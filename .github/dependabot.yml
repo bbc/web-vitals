@@ -9,3 +9,10 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    labels:
+      - 'dependencies'
+    groups:
+      babel:
+        patterns:
+          - '@babel/*'
+          - 'babel-*'
