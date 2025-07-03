@@ -16,3 +16,6 @@ updates:
         patterns:
           - '@babel/*'
           - 'babel-*'
+      testing-library:
+        patterns:
+          - '@testing-library/*'
