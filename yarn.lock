@@ -1430,7 +1430,7 @@ __metadata:
     "@testing-library/user-event": ^14.5.2
     babel-eslint: 10.1.0
     babel-plugin-add-import-extension: ^1.6.0
-    cross-fetch: ^3.1.5
+    cross-fetch: ^4.1.0
     eslint: ^7.10.0
     eslint-config-prettier: ^8.0.0
     eslint-plugin-es5: ^1.5.0
@@ -3112,12 +3112,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-fetch@npm:^3.1.5":
-  version: 3.2.0
-  resolution: "cross-fetch@npm:3.2.0"
+"cross-fetch@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "cross-fetch@npm:4.1.0"
   dependencies:
     node-fetch: ^2.7.0
-  checksum: 8ded5ea35f705e81e569e7db244a3f96e05e95996ff51877c89b0c1ec1163c76bb5dad77d0f8fba6bb35a0abacb36403d7271dc586d8b1f636110ee7a8d959fd
+  checksum: c02fa85d59f83e50dbd769ee472c9cc984060c403ee5ec8654659f61a525c1a655eef1c7a35e365c1a107b4e72d76e786718b673d1cb3c97f61d4644cb0a9f9d
   languageName: node
   linkType: hard
 
