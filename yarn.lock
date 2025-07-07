@@ -1429,7 +1429,7 @@ __metadata:
     "@rollup/plugin-babel": ^6.0.4
     "@rollup/plugin-terser": ^0.4.4
     "@testing-library/dom": ^10.4.0
-    "@testing-library/jest-dom": ^6.4.5
+    "@testing-library/jest-dom": ^6.6.3
     "@testing-library/react": ^15.0.0
     "@testing-library/user-event": ^14.5.2
     babel-eslint: 10.1.0
@@ -2083,7 +2083,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^6.4.5":
+"@testing-library/jest-dom@npm:^6.6.3":
   version: 6.6.3
   resolution: "@testing-library/jest-dom@npm:6.6.3"
   dependencies:
