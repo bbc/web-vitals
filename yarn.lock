@@ -1445,7 +1445,7 @@ __metadata:
     jest: ^29.7.0
     jest-environment-jsdom: ^29.7.0
     prettier: 2.2.1
-    react: 18.2.0
+    react: 19.1.1
     react-dom: 18.2.0
     rollup: ^4.32.1
     rollup-plugin-auto-external: ^2.0.0
@@ -6450,12 +6450,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react@npm:18.2.0"
-  dependencies:
-    loose-envify: ^1.1.0
-  checksum: 88e38092da8839b830cda6feef2e8505dec8ace60579e46aa5490fc3dc9bba0bd50336507dc166f43e3afc1c42939c09fe33b25fae889d6f402721dcd78fca1b
+"react@npm:19.1.1":
+  version: 19.1.1
+  resolution: "react@npm:19.1.1"
+  checksum: f2f18fea5deac87b1167365bd5160bcba64d383c26a37afa905b714ca424f423ef97d8daf53f041ab9ac25a06357fafcf0b5d3b6b84c9d1eace0e621bfeae629
   languageName: node
   linkType: hard
 
