@@ -36,13 +36,14 @@ npm install --global yarn
 
 ## Props
 
-| Argument          | Type     | Required | Default     | Example                                                       |
-| ----------------- | -------- | -------- | ----------- | ------------------------------------------------------------- |
-| enabled           | Boolean  | No       | false       | `{ enabled: true }`                                           |
-| reportingEndpoint | String   | Yes      | N/A         | `{ reportingEndpoint: 'https://url.to.report.to/analytics' }` |
-| loggerCallback    | Function | No       | `() => {}`  | `{ loggerCallback: (error) => console.error(error) }`         |
-| sampleRate        | Integer  | No       | 100         | `{ sampleRate: 5 }`                                           |
-| reportParams      | Object   | No       | `undefined` | `{ reportParams: { pageType: 'STY' }`                         |
+| Argument          | Type     | Required | Default        | Example                                                                                                 |
+| ----------------- | -------- | -------- | -------------- | ------------------------------------------------------------------------------------------------------- |
+| enabled           | Boolean  | No       | false          | `{ enabled: true }`                                                                                     |
+| reportingEndpoint | String   | Yes      | N/A            | `{ reportingEndpoint: 'https://url.to.report.to/analytics' }`                                           |
+| loggerCallback    | Function | No       | `() => {}`     | `{ loggerCallback: (error) => console.error(error) }`                                                   |
+| sampleRate        | Integer  | No       | 100            | `{ sampleRate: 5 }`                                                                                     |
+| reportParams      | Object   | No       | `undefined`    | `{ reportParams: { pageType: 'STY' }`                                                                   |
+| fetch             | Function | No       | `window.fetch` | Allows you to provide a fetch ponyfill if you support browsers that do not have a native fetch function |
 
 ## Usage
 
@@ -91,7 +92,6 @@ In situations where users have not provided permission for the relevant personal
 Web Vitals is completely open source. We are grateful for any contributions, whether they be new utilities, bug fixes or general improvements. Please see our primary contributing guide which can be found at [the root of the Web Vitals repository](https://github.com/bbc/web-vitals/blob/latest/CONTRIBUTING.md).
 
 ### Code of Conduct
-
 
 We welcome feedback and help on this work. By participating in this project, you agree to abide by the [code of conduct](https://github.com/bbc/web-vitals/blob/latest/.github/CODE_OF_CONDUCT.md). Please take a moment to read it.
 

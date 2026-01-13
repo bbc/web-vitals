@@ -39,11 +39,10 @@
   },
   "homepage": "https://github.com/bbc/web-vitals/blob/main/README.md",
   "dependencies": {
-    "cross-fetch": "^4.1.0",
     "web-vitals": "^3.3.2"
   },
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0"
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",

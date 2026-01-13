@@ -1,13 +1,12 @@
-import fetch from 'cross-fetch';
 import * as webVitals from 'web-vitals';
 import { renderHook } from '@testing-library/react';
 import useWebVitals from './index';
 
-jest.mock('cross-fetch');
+global.fetch = jest.fn();
 jest.mock('web-vitals');
-jest.mock('./lib/use-memory-status.js')
-jest.mock('./lib/use-hardware-concurrency.js')
-jest.mock('./lib/use-network-status.js')
+jest.mock('./lib/use-memory-status.js');
+jest.mock('./lib/use-hardware-concurrency.js');
+jest.mock('./lib/use-network-status.js');
 
 beforeEach(jest.clearAllMocks);
 
@@ -133,6 +132,25 @@ describe('useWebVitals', () => {
         body: expect.any(String),
         mode: 'no-cors',
       });
+    });
+
+    it('uses the provided fetch function in preference to window.fetch when sendBeacon is unavailable', async () => {
+      const customFetch = jest.fn();
+      customFetch.mockImplementation(() => Promise.resolve());
+      renderHook(() =>
+        useWebVitals({ enabled, reportingEndpoint, fetch: customFetch }),
+      );
+
+      await eventListeners.pagehide();
+
+      expect(navigator.sendBeacon).toBeUndefined();
+      expect(customFetch).toHaveBeenCalledWith(reportingEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/reports+json' },
+        body: expect.any(String),
+        mode: 'no-cors',
+      });
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('appends the report params as query string parameters to the reporting endpoint if one is provided', async () => {
