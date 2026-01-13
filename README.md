@@ -93,6 +93,7 @@ Web Vitals is completely open source. We are grateful for any contributions, whe
 
 ### Code of Conduct
 
+
 We welcome feedback and help on this work. By participating in this project, you agree to abide by the [code of conduct](https://github.com/bbc/web-vitals/blob/latest/.github/CODE_OF_CONDUCT.md). Please take a moment to read it.
 
 ### License

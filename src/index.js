@@ -61,9 +61,7 @@ const sendBeacon = (rawBeacon, reportingEndpoint, reportParams, fetch) => {
 
   if (webVitalsDebug === true) {
     console.log('WEBVITALS DEBUG IS ON');
-    console.log(
-      `In production, WebVitals data would be sent to ${beaconTarget} with the following payload`,
-    );
+    console.log(`In production, WebVitals data would be sent to ${beaconTarget} with the following payload`);
     console.dir(rawBeacon);
     return new Promise((resolve, reject) => {
       resolve();
