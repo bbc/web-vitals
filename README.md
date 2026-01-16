@@ -36,13 +36,14 @@ npm install --global yarn
 
 ## Props
 
-| Argument          | Type     | Required | Default     | Example                                                       |
-| ----------------- | -------- | -------- | ----------- | ------------------------------------------------------------- |
-| enabled           | Boolean  | No       | false       | `{ enabled: true }`                                           |
-| reportingEndpoint | String   | Yes      | N/A         | `{ reportingEndpoint: 'https://url.to.report.to/analytics' }` |
-| loggerCallback    | Function | No       | `() => {}`  | `{ loggerCallback: (error) => console.error(error) }`         |
-| sampleRate        | Integer  | No       | 100         | `{ sampleRate: 5 }`                                           |
-| reportParams      | Object   | No       | `undefined` | `{ reportParams: { pageType: 'STY' }`                         |
+| Argument          | Type     | Required | Default        | Example                                                                                                 |
+| ----------------- | -------- | -------- | -------------- | ------------------------------------------------------------------------------------------------------- |
+| enabled           | Boolean  | No       | false          | `{ enabled: true }`                                                                                     |
+| reportingEndpoint | String   | Yes      | N/A            | `{ reportingEndpoint: 'https://url.to.report.to/analytics' }`                                           |
+| loggerCallback    | Function | No       | `() => {}`     | `{ loggerCallback: (error) => console.error(error) }`                                                   |
+| sampleRate        | Integer  | No       | 100            | `{ sampleRate: 5 }`                                                                                     |
+| reportParams      | Object   | No       | `undefined`    | `{ reportParams: { pageType: 'STY' }`                                                                   |
+| fetch             | Function | No       | `window.fetch` | Allows you to provide a fetch ponyfill if you support browsers that do not have a native fetch function |
 
 ## Usage
 

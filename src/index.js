@@ -1,4 +1,3 @@
-import fetch from 'cross-fetch';
 import { useEffect, useState } from 'react';
 import { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } from 'web-vitals';
 
@@ -54,7 +53,7 @@ const appendReportParams = (reportingEndpoint, reportParams) => {
     : `${reportingEndpoint}?${paramsString}`;
 };
 
-const sendBeacon = (rawBeacon, reportingEndpoint, reportParams) => {
+const sendBeacon = (rawBeacon, reportingEndpoint, reportParams, fetch) => {
   const beacon = JSON.stringify(rawBeacon);
   const beaconTarget = reportParams
     ? appendReportParams(reportingEndpoint, reportParams)
@@ -65,7 +64,7 @@ const sendBeacon = (rawBeacon, reportingEndpoint, reportParams) => {
     console.log(`In production, WebVitals data would be sent to ${beaconTarget} with the following payload`);
     console.dir(rawBeacon);
     return new Promise((resolve, reject) => {
-        resolve();
+      resolve();
     });
   }
 
@@ -99,6 +98,7 @@ const useWebVitals = ({
   reportParams,
   webVitalsListener = 'pagehide',
   debug = false,
+  fetch = window.fetch,
 }) => {
   let pageLoadTime;
   webVitalsDebug = debug;
@@ -121,7 +121,7 @@ const useWebVitals = ({
       { ...webVitalsBase, age: pageAge, body: { ...vitals, ...deviceMetrics } },
     ];
 
-    sendBeacon(beacon, reportingEndpoint, reportParams).catch(loggerCallback);
+    sendBeacon(beacon, reportingEndpoint, reportParams, fetch).catch(loggerCallback);
   };
 
   useEvent(webVitalsListener, shouldSendVitals ? sendVitals : noOp);
